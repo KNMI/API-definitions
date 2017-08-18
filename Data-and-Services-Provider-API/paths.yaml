@@ -1,0 +1,42 @@
+paths:
+  /dataset_categories:
+    get:
+      $ref: get_paths.yaml#/~1dataset_categories/get
+  
+  /dataset_categories/{category_id}:
+    parameters:
+      $ref: get_paths.yaml#/~1dataset_categories~1{category_id}/parameters
+    get:
+      $ref: get_paths.yaml#/~1dataset_categories~1{category_id}/get
+            
+  /dataset_categories/{category_id}/product_types:
+    parameters:
+      $ref: get_paths.yaml#/~1dataset_categories~1{category_id}~1product_types/parameters
+    get:
+      $ref: get_paths.yaml#/~1dataset_categories~1{category_id}~1product_types/get
+              
+  /dataset_categories/{category_id}/product_types/{product_id}:
+    parameters:
+      $ref: get_paths.yaml#/~1dataset_categories~1{category_id}~1product_types~1{product_id}/parameters
+    get:
+      $ref: get_paths.yaml#/~1dataset_categories~1{category_id}~1product_types~1{product_id}/get
+            
+  /datasets:
+    get:
+      $ref: get_paths.yaml#/~1datasets/get
+              
+  /datasets/{dataset_id}:
+    parameters:
+      $ref: get_paths.yaml#/~1datasets~1{dataset_id}/parameters
+    get:
+      $ref: get_paths.yaml#/~1datasets~1{dataset_id}/get
+    
+  /services:
+    get:
+      $ref: get_paths.yaml#/~1services/get
+
+  /services/{service_type_id}:
+    parameters:
+      $ref: get_paths.yaml#/~1services~1{service_type_id}/parameters
+    get:
+      $ref: get_paths.yaml#/~1services~1{service_type_id}/get

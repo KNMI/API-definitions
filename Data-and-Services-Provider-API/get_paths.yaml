@@ -1,0 +1,101 @@
+/dataset_categories:
+  get:
+    tags: ['Dataset Discovery']
+    summary: "Retrieve all types of datasets"
+    responses:
+      200:
+        description: "Succesful operation - List of types of data categories"
+        schema:
+          type: "array"
+          items:
+            $ref: '#/definitions/dataset_category'
+
+/dataset_categories/{category_id}:
+  parameters:
+    - $ref: '#/parameters/category_id'
+  get:
+    tags: ['Dataset Discovery']
+    summary: "Retrieve information about a certain data category"
+    responses:
+      200:
+        description: "Succesful operation - Description of the relevant category"
+        schema:
+          type: object
+            
+/dataset_categories/{category_id}/product_types:
+  parameters:
+    - $ref: '#/parameters/category_id'
+  get:
+    tags: ['Dataset Discovery']
+    summary: "Retrieve possible products within a category"
+    responses:
+      200:
+        description: "Succesful operation - List of products types belonging to the category"
+        schema:
+          type: array
+          items:
+            $ref: '#/definitions/product_types'
+              
+/dataset_categories/{category_id}/product_types/{product_id}:
+  parameters:
+    - $ref: '#/parameters/category_id'
+    - $ref: '#/parameters/product_id'
+  get:
+    tags: ['Dataset Discovery']
+    summary: "Retrieve information about a certain product"
+    responses:
+      200:
+        description: "Succesful operation - A specific object"
+        schema:
+          type: object
+            
+/datasets:
+  get:
+    tags: ['Dataset Discovery']
+    summary: "Retrieve all datasets in the catalogue"
+    description: ""
+    responses:
+      200:
+        description: OK
+        schema:
+          type: array
+          items:
+            $ref: '#/definitions/dataset_item'
+              
+/datasets/{dataset_id}:
+  parameters: 
+    - $ref: '#/parameters/dataset_id'
+  get:
+    tags: ['Dataset Discovery']
+    summary: "Retrieve a specific dataset"
+    description: ""
+    responses:
+      200:
+        description: OK
+        schema:
+          type: object
+    
+/services:
+  get:
+    tags: ['Service Discovery']
+    summary: "Retrieve all types of services"
+    responses:
+      200:
+        description: "Succesful operation - List of types of service types"
+        schema:
+          type: "array"
+          items:
+            $ref: '#/definitions/service_type'
+
+/services/{service_type_id}:
+  parameters: 
+    - $ref: '#/parameters/service_type_id'
+
+  get:
+    tags: ['Service Discovery']
+    summary: "Retrieve information about a specific service"
+    responses:
+      200:
+        description: "Succesful operation - Information about about a service type"
+        schema:
+          type: object
