@@ -2,6 +2,26 @@ paths:
   /dataset_categories:
     get:
       $ref: get_paths.yaml#/~1dataset_categories/get
+    post:
+      summary: "Create a new dataset category"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "DatasetCategory that needs to be added to the catalogue"
+          required: true
+          schema:
+            $ref: "#/definitions/dataset_category"
+      responses:
+        200:
+          description: "Succesful operation - Created a new dataset category"
+          schema:
+            $ref: '#/definitions/dataset_category'
+        405:
+          description: "Invalid input"
   
   /dataset_categories/{category_id}:
     parameters:

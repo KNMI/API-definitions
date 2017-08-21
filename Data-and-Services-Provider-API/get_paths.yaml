@@ -6,7 +6,7 @@
       200:
         description: "Succesful operation - List of types of data categories"
         schema:
-          type: "array"
+          type: array
           items:
             $ref: '#/definitions/dataset_category'
 
@@ -83,7 +83,7 @@
       200:
         description: "Succesful operation - List of types of service types"
         schema:
-          type: "array"
+          type: array
           items:
             $ref: '#/definitions/service_type'
 
