@@ -1,0 +1,24 @@
+category_id:
+  name: category_id
+  in: path
+  description: The name of the category
+  type: string
+  required: true
+product_id:
+  name: product_id
+  in: path
+  description: The identifier of the product
+  type: number
+  required: true
+dataset_id: 
+  name: dataset_id
+  in: path
+  description: The identifier of a dataset
+  type: number
+  required: true
+service_type_id: 
+  name: service_type_id
+  in: path
+  description: The identifier of a service type
+  type: string
+  required: true

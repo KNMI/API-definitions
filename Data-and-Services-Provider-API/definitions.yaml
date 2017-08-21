@@ -1,0 +1,47 @@
+dataset_category:
+  type: object
+  properties:
+    id:
+      type: integer
+    name:
+      type: string
+    description:
+      type: string
+  title: "DatasetCategory"
+    
+product_types:
+  type: object
+  properties:
+    id:
+      type: integer
+    name:
+      type: string
+    description:
+      type: string
+  title: "ProductTypes"
+      
+dataset_item:
+  type: object
+  properties:
+    id: 
+      type: number
+    name: 
+      type: string
+    maintainer:
+      type: string
+    locator:
+      type: string
+    product_type:
+      type: string
+  title: "DatasetItem"
+    
+service_type:
+  type: object
+  properties:
+    id:
+      type: integer
+    name: 
+      type: string
+    description:
+      type: string
+  title: "ServiceType"
